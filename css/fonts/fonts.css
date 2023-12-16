@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "FD";
+  src: url("./FlyingDutchman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BRS";
+  src: url("./BellaRosePlain.ttf") format("truetype");
+}
+
+.font-fd {
+  font-family: "FD";
+}
+
+.font-brs {
+  font-family: "BRS";
+}
