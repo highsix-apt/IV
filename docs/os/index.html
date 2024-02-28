@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/fonts/fonts.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/paragraph.css" />
+    <link rel="icon" href="../../icon.ico" type="image/x-icon" />
+    <title>highsix</title>
+  </head>
+  <body>
+    <div class="image-header left">
+      <img src="../../img/bless1.jpeg" alt="bless1" />
+    </div>
+    <div class="image-header right">
+      <img src="../../img/bless2.jpeg" alt="bless2" />
+    </div>
+
+    <section class="container-paragraph">
+      <h1 class="paragraph-title">Sistema Operacional</h1>
+
+      <h2 class="paragraph-subtitle">Introdução</h2>
+      <div class="paragraph-bg-txt">
+        <p class="paragraph-txt first">
+          Sistema operacional é um programa entre o hardware e os programas dos usuários de forma a atingir esses dois objetivos.
+        </p>
+        <div class="paragraph-image-small">
+          <img src="img/hierarquia.png" alt="hierarquia" />
+        </div>
+        <h3 class="paragraph-h3">Componentes Genéricos</h3>
+        <p>- Hardware: recurso físico base.</p>
+        <p>- Sistema operacional: controla e coordena o uso de hardware entre vários aplicativos e usuários.</p>
+        <p>- Programas aplicativos e de sistema: define como o uso do hardware trabalha na resolução de problemas.</p>
+        <p>- Usuários: pessoas, máquinas.</p>
+        <div class="paragraph-image-large">
+          <img src="img/conceito.png" alt="conceito" />
+        </div>
+      </div>
+
+      <h2 class="paragraph-subtitle">Conceito e Objetivos do Sistema Operacional</h2>
+      <div class="paragraph-bg-txt">
+        <p class="paragraph-txt first">Interface entre aplicativos e o hardware. Há duas formas de ver um sistema operacional:</p>
+        <span> - Alocador de recursos</span>
+        <span> - Programa de controle</span>
+        <p>Tornar mais conveniente e eficiente a utilização de um computador, facilitar a evolução do sistema.</p>
+        <div class="paragraph-image-large">
+          <img src="img/interfaces.png" alt="interfaces" />
+        </div>
+        <h3 class="paragraph-h3">Serviços oferecidos pelo Sistema Operacional</h3>
+        <ul>
+          <li>
+            Criação de programas
+            <ul>
+              <li>Editores, depuradores, compiladores, etc.</li>
+            </ul>
+          </li>
+          <li>
+            Execução dos programas
+            <ul>
+              <li>Carga de programas em memórias</li>
+            </ul>
+          </li>
+          <li>Acesso a dispositivos de E/S</li>
+          <li>Controle de acesso a arquivos</li>
+          <li>
+            Acesso a recursos de sistema
+            <ul>
+              <li>Proteção entre usuários</li>
+            </ul>
+          </li>
+          <li>
+            Contabilidade
+            <ul>
+              <li>Estatísticas</li>
+              <li>Monitoração de desempenho</li>
+              <li>Sinalizar upgrades necessários de hardware (memória, disco, etc.)</li>
+              <li>Tarifação de usuários</li>
+            </ul>
+          </li>
+
+          <li>
+            Detecção de erros
+            <ul>
+              <li>
+                Erros de hardware
+                <ul>
+                  <li>e.g., erros de memória, falha em dispositivos de E/S, etc.</li>
+                </ul>
+              </li>
+              <li>
+                Erros de programação
+                <ul>
+                  <li>e.g., overflow, acesso não autorizado a posições de memória, etc.</li>
+                </ul>
+              </li>
+              <li>Aplicação solicita recursos que o sistema operacional não pode alocar (segurança, falta do recurso, etc.)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="paragraph-subtitle">Visões de um Sistema Operacional</h2>
+      <div class="paragraph-bg-txt">
+        <ul>
+          <li>
+            Sistema operacional na visão do usuário
+            <ul>
+              <li>Imagem que um usuário tem do sistema</li>
+              <li>
+                Interface oferecida ao usuário para ter acesso a recursos do sistema
+                <ul>
+                  <li>Chamadas de sistema</li>
+                  <li>Programas de sistema</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sistema operacional na visão de projeto
+            <ul>
+              <li>Organização interna do sistema operacional</li>
+              <li>Mecanismos empregados para gerenciar recursos do sistema</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3 class="paragraph-h3">Chamadas de Sistema</h3>
+        <p>Forma que programas solicitam serviços ao sistema operacional.</p>
+        <ul>
+          <li>
+            Análogo a sub-rotinas
+            <ul>
+              <li>Transferem controle para o sistema operacional ao invés de transferir para outro ponto do programa</li>
+            </ul>
+          </li>
+          <li>
+            É o núcleo (kernel) do sistema operacional que implementa as chamadas de sistema
+            <ul>
+              <li>Existem chamadas de sistema associadas a gerência do processador, de memória, arquivos e de E/S</li>
+            </ul>
+          </li>
+          <li>
+            Variação: micro-kernel
+            <ul>
+              <li>Serviços básicos são implementados pelo micro-kernel</li>
+              <li>Kernel implementa demais serviços empregando esses serviços básicos</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3 class="paragraph-h3">Programas de Sistema</h3>
+        <p>Programas executados fora do Kernel (utilitários) e implementam tarefas básicas</p>
+        <ul>
+          <li>
+            Muitas vezes confundidos com o próprio sistema operacional
+            <ul>
+              <li>e.g., compiladores, assemblers, ligadores, etc.</li>
+            </ul>
+          </li>
+          <li>
+            Interpretador de comandos
+            <ul>
+              <li>
+                Ativado sempre que o sistema operacional inicia uma sessão de trabalho
+                <ul>
+                  <li>e.g., bash, tsch, sh, etc.</li>
+                </ul>
+              </li>
+              <li>
+                Interface gráfica de usuário (GUI)
+                <ul>
+                  <li>e.g., Família Windows, MacOS, etc.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="fixed-bottom">
+      <span class="font-brs description-footer">you're in the documentations</span>
+    </footer>
+  </body>
+</html>
