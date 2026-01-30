@@ -1,0 +1,204 @@
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 15vw;
+  background: #000;
+  z-index: 2000;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.image-header {
+  height: 100%;
+}
+
+.image-header img {
+  max-height: 100%;
+  width: auto;
+}
+
+/* =========================================================
+   PLAYER
+   ========================================================= */
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 30%;
+  color: white;
+}
+
+.player button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* =========================================================
+   ICONS — PREV / NEXT
+   ========================================================= */
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+}
+
+.prev-icon,
+.next-icon {
+  display: flex;
+  gap: 4px;
+}
+
+.prev-icon span,
+.next-icon span {
+  width: 0;
+  height: 0;
+
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.prev-icon span {
+  border-right: 12px solid white;
+}
+
+.next-icon span {
+  border-left: 12px solid white;
+}
+
+.icon-btn:hover .prev-icon span {
+  border-right-color: rgb(58, 14, 99);
+}
+
+.icon-btn:hover .next-icon span {
+  border-left-color: rgb(58, 14, 99);
+}
+
+/* =========================================================
+   ICONS — PLAY / PAUSE
+   ========================================================= */
+
+.play-btn {
+  display: flex;
+  align-items: center;
+}
+
+.play-icon {
+  --size: 12px;
+
+  border-top: calc(var(--size) / 1.5) solid transparent;
+  border-bottom: calc(var(--size) / 1.5) solid transparent;
+  border-left: var(--size) solid white;
+}
+
+.pause-icon {
+  --h: 16px;
+  --w: 3px;
+  --gap: 6px;
+
+  display: flex;
+  gap: var(--gap);
+}
+
+.pause-icon span {
+  width: var(--w);
+  height: var(--h);
+  background-color: white;
+}
+
+/* estado */
+.play-btn .pause-icon {
+  display: none;
+}
+
+.play-btn.playing .pause-icon {
+  display: flex;
+}
+
+.play-btn.playing .play-icon {
+  display: none;
+}
+
+/* hover */
+.play-icon:hover {
+  border-left-color: rgb(58, 14, 99);
+}
+
+.play-btn:hover .pause-icon span {
+  background-color: rgb(58, 14, 99);
+}
+
+/* =========================================================
+   TIME / PROGRESS
+   ========================================================= */
+
+.time {
+  min-width: 38px;
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 220px;
+  height: 4px;
+  background: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: rgb(81, 48, 112);
+}
+
+/* =========================================================
+   VOLUME
+   ========================================================= */
+
+.volume-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.volume-bars span {
+  width: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+/* alturas */
+.volume-bars span:nth-child(1) {
+  height: 6px;
+}
+.volume-bars span:nth-child(2) {
+  height: 9px;
+}
+.volume-bars span:nth-child(3) {
+  height: 12px;
+}
+.volume-bars span:nth-child(4) {
+  height: 15px;
+}
+.volume-bars span:nth-child(5) {
+  height: 18px;
+}
+
+/* ativo */
+.volume-bars span.active {
+  background: rgb(81, 48, 112);
+}

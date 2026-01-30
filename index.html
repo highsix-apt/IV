@@ -3,30 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>highsix</title>
+
+    <link rel="icon" href="./icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/fonts/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" href="./icon.ico" type="image/x-icon" />
-    <title>highsix</title>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <script src="js/music.js" defer></script>
   </head>
+
   <body>
-    <audio id="player" preload="auto" autoplay loop>
-      <source src="music/bossout.mp3" type="audio/mp3" />
-    </audio>
-    <div class="image-header left">
-      <img src="img/bless1.jpeg" alt="bless1" />
-    </div>
-    <div class="image-header right">
-      <img src="img/bless2.jpeg" alt="bless2" />
-    </div>
+    <!-- Audio engine -->
+    <audio id="audio"></audio>
 
-    <section class="container">
-      <a class="font-fd link" href="https://highsix.ftp.sh/mark/docs/"
-        >documentations</a
-      >
-    </section>
+    <!-- Header / Player -->
+    <header class="fixed-header">
+      <!-- Left image -->
+      <div class="image-header left">
+        <img src="img/bless1.jpeg" alt="bless1" />
+      </div>
 
+      <!-- Player controls -->
+      <div class="player">
+        <!-- Track name -->
+        <span class="font-brs" id="music-name">N/A</span>
+
+        <!-- Previous -->
+        <button id="prev" class="icon-btn prev-btn" aria-label="Previous track">
+          <div class="prev-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <!-- Play / Pause -->
+        <button
+          id="playPause"
+          class="play-btn playing"
+          aria-label="Play or pause"
+        >
+          <div class="play-icon"></div>
+
+          <div class="pause-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <!-- Next -->
+        <button id="next" class="icon-btn next-btn" aria-label="Next track">
+          <div class="next-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <!-- Time -->
+        <span class="time" id="currentTime">0:00</span>
+
+        <!-- Progress bar -->
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <span class="time" id="duration">0:00</span>
+
+        <!-- Volume -->
+        <div class="volume-bars" id="volumeBars" aria-label="Volume">
+          <span data-level="1"></span>
+          <span data-level="2"></span>
+          <span data-level="3"></span>
+          <span data-level="4"></span>
+          <span data-level="5"></span>
+        </div>
+      </div>
+
+      <!-- Right image -->
+      <div class="image-header right">
+        <img src="img/bless2.jpeg" alt="bless2" />
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <section class="container"></section>
+
+    <!-- Footer -->
     <footer class="fixed-bottom">
-      <span class="font-brs description-footer">IV room</span>
+      <span class="font-brs description-footer">iv room</span>
     </footer>
   </body>
 </html>
