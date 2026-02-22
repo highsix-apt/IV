@@ -29,8 +29,10 @@ function createChain({ angle, x, y = "-200vh", units = 60 }) {
 }
 
 createChain({ angle: 85, x: "-45vw" });
-createChain({ angle: 80, x: "-4vw" });
+createChain({ angle: 68, x: "15vw" });
+createChain({ angle: 120, x: "-20vw" });
 createChain({ angle: 10, x: "-200vw", y: "20vh" });
-createChain({ angle: 0, x: "-200vw", y: "20vh" });
+createChain({ angle: 250, x: "230vw", y: "3000px" });
+createChain({ angle: 320, x: "1700px", y: "3000px" });
 createChain({ angle: 150, x: "2800px" });
-createChain({ angle: 290, x: "500px", y: "3000px" });
+createChain({ angle: 290, x: "850px", y: "3000px" });

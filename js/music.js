@@ -17,6 +17,10 @@ const musicName = document.getElementById("music-name");
    ========================= */
 
 const playlist = [
+  { src: "music/h4rdjump1988.mp3" },
+  { src: "music/sing you sinners.mp3" },
+  { src: "music/obcecada.mp3" },
+  { src: "music/CRASH THE WHIP.mp3" },
   { src: "music/bossout.mp3" },
   { src: "music/moonlight.mp3" },
   { src: "music/stay the night.mp3" },

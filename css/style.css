@@ -8,7 +8,7 @@ body::-webkit-scrollbar {
 
 body {
   margin: 0 20px;
-  background-color: #000;
+  background-color: #ffffff;
   scroll-behavior: smooth;
   min-height: 100vh;
 }
@@ -24,9 +24,41 @@ img {
 
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+}
+
+.profile {
+  width: 55%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  border: 4px solid #000000;
+  z-index: 5;
+}
+
+.image-profile {
+  height: 100%;
+}
+
+.description {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 3vh;
+  color: rgb(0, 0, 0);
+}
+
+.image-profile img {
+  max-height: 100%;
+  width: auto;
+}
+
+li::marker {
+  content: "✦ ";
+  color: rgb(110, 108, 110);
 }
 
 .link {

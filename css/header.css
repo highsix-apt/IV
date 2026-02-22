@@ -22,6 +22,7 @@
 
 .image-header img {
   max-height: 100%;
+  filter: invert(1);
   width: auto;
 }
 
@@ -34,14 +35,14 @@
   align-items: center;
   gap: 14px;
   height: 30%;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .player button {
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* =========================================================
@@ -69,19 +70,19 @@
 }
 
 .prev-icon span {
-  border-right: 12px solid white;
+  border-right: 12px solid rgb(0, 0, 0);
 }
 
 .next-icon span {
-  border-left: 12px solid white;
+  border-left: 12px solid rgb(0, 0, 0);
 }
 
 .icon-btn:hover .prev-icon span {
-  border-right-color: rgb(58, 14, 99);
+  border-right-color: rgba(3, 3, 3, 0.6);
 }
 
 .icon-btn:hover .next-icon span {
-  border-left-color: rgb(58, 14, 99);
+  border-left-color: rgba(3, 3, 3, 0.6);
 }
 
 /* =========================================================
@@ -98,7 +99,7 @@
 
   border-top: calc(var(--size) / 1.5) solid transparent;
   border-bottom: calc(var(--size) / 1.5) solid transparent;
-  border-left: var(--size) solid white;
+  border-left: var(--size) solid rgb(0, 0, 0);
 }
 
 .pause-icon {
@@ -113,7 +114,7 @@
 .pause-icon span {
   width: var(--w);
   height: var(--h);
-  background-color: white;
+  background-color: rgb(2, 2, 2);
 }
 
 /* estado */
@@ -131,11 +132,11 @@
 
 /* hover */
 .play-icon:hover {
-  border-left-color: rgb(58, 14, 99);
+  border-left-color: rgba(3, 3, 3, 0.6);
 }
 
 .play-btn:hover .pause-icon span {
-  background-color: rgb(58, 14, 99);
+  background-color: rgba(3, 3, 3, 0.6);
 }
 
 /* =========================================================
@@ -145,13 +146,13 @@
 .time {
   min-width: 38px;
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .progress-container {
   width: 220px;
   height: 4px;
-  background: white;
+  background: rgb(0, 0, 0);
   cursor: pointer;
   position: relative;
 }
@@ -159,7 +160,7 @@
 .progress-bar {
   height: 100%;
   width: 0%;
-  background: rgb(81, 48, 112);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* =========================================================
@@ -175,7 +176,7 @@
 
 .volume-bars span {
   width: 4px;
-  background: white;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 2px;
   transition: background 0.2s ease;
 }
@@ -199,5 +200,5 @@
 
 /* ativo */
 .volume-bars span.active {
-  background: rgb(81, 48, 112);
+  background: rgb(0, 0, 0);
 }
