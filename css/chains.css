@@ -1,0 +1,88 @@
+.chains-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.chain-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: scale(0.3);
+  transform-origin: center;
+}
+
+.chain {
+  --angle: 0deg;
+  --x: 0vw;
+  --y: -200vh;
+  --step: 205px;
+  --link-gap: 100px;
+  --speed: 0.35s;
+  --move-distance: 615px;
+
+  will-change: transform;
+  animation: moveChain linear infinite;
+  animation-duration: var(--speed);
+}
+
+.chain-unit {
+  position: absolute;
+  z-index: calc(100 - var(--i));
+  transform: translate(
+    calc(cos(var(--angle)) * var(--step) * var(--i)),
+    calc(sin(var(--angle)) * var(--step) * var(--i))
+  );
+}
+
+.chain-link {
+  position: absolute;
+  width: 115px;
+  border-radius: 15px;
+}
+
+/* elo principal */
+.chain-link.main {
+  height: 32px;
+  background: transparent;
+  border: 4px solid #ffffff;
+  z-index: 1;
+  position: absolute;
+
+  transform: translate(
+      calc(-50% - cos(var(--angle)) * var(--link-gap) / 2),
+      calc(-50% - sin(var(--angle)) * var(--link-gap) / 2)
+    )
+    rotate(var(--angle));
+}
+
+/* elo interno */
+.chain-link.wrap {
+  height: 6px;
+  background: white;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 0 8px black;
+  z-index: 2;
+  position: absolute;
+
+  transform: translate(
+      calc(-50% + cos(var(--angle)) * var(--link-gap) / 2),
+      calc(-50% + sin(var(--angle)) * var(--link-gap) / 2)
+    )
+    rotate(var(--angle));
+}
+
+@keyframes moveChain {
+  from {
+    transform: translate(var(--x), var(--y));
+  }
+
+  to {
+    transform: translate(
+      calc(var(--x) + cos(var(--angle)) * var(--move-distance)),
+      calc(var(--y) + sin(var(--angle)) * var(--move-distance))
+    );
+  }
+}

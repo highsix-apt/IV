@@ -7,10 +7,9 @@
   top: 0;
   left: 0;
   right: 0;
-
   height: 15vw;
-  background: #000;
-  z-index: 2000;
+  background: transparent;
+  z-index: 100;
 
   display: flex;
   align-items: flex-start;
