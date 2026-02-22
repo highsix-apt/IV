@@ -21,7 +21,7 @@
   --y: -200vh;
   --step: 205px;
   --link-gap: 100px;
-  --speed: 0.7s;
+  --speed: 0.8s;
   --move-distance: 615px;
 
   will-change: transform;
